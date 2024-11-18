@@ -1,0 +1,45 @@
+[project]
+enable_telemetry = true
+user_env = []
+session_timeout = 3600
+cache = false
+allow_origins = ["*"]
+
+[features]
+unsafe_allow_html = false
+latex = false
+auto_tag_thread = true
+edit_message = true
+
+[features.spontaneous_file_upload]
+    enabled = true
+    accept = ["*/*"]
+    max_files = 20
+    max_size_mb = 500
+
+[features.audio]
+    min_decibels = -45
+    initial_silence_timeout = 3000
+    silence_timeout = 1500
+    max_duration = 15000
+    chunk_duration = 1000
+    sample_rate = 44100
+
+[UI]
+name = "Assistant"
+default_collapse_content = true
+cot = "full"
+
+[UI.theme]
+    default = "dark"
+
+[UI.theme.light]
+    [UI.theme.light.primary]
+    [UI.theme.light.text]
+
+[UI.theme.dark]
+    [UI.theme.dark.primary]
+    [UI.theme.dark.text]
+
+[meta]
+generated_by = "1.3.2"
